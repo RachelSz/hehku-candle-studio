@@ -82,6 +82,20 @@ export default function Home() {
           </div>
         </Column>
       </Row>
+
+      <Row>
+        <Column sizes={{ mobile: 12, tablet: 12, desktop: 12 }}>
+          <div
+            style={{
+              border: '1px solid black',
+              width: '100%',
+              height: '3900px',
+            }}
+          >
+            {' '}
+          </div>
+        </Column>
+      </Row>
     </Container>
   );
 }
