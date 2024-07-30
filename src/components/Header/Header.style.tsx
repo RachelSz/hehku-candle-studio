@@ -6,13 +6,14 @@ export const HeaderWrapper = styled.div`
   display: flex;
   flex-direction: row;
   align-items: end;
+  border-radius: 3px;
 
   position: sticky;
   top: 0;
   background-color: ${Colors.secondary};
   box-shadow:
-    rgba(0, 0, 0, 0.043) 0px 3px 5px,
-    rgba(0, 0, 0, 0.053) 0px 3px 3px;
+    rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
 
   padding: 10px;
   z-index: 999;

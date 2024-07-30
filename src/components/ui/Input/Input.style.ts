@@ -16,6 +16,11 @@ export const InputWrapper = styled.div<InputWrapperProps>`
   }
   input {
     background-color: ${(props) => props.variant ?? props.variant};
+
+    color: ${(props) =>
+      props.variant === Colors.tertiary || props.variant === Colors.dark
+        ? Colors.lightText
+        : Colors.darkGreyText};
     font-size: 16px;
     font-weight: 400;
     width: ${(props) =>
@@ -30,6 +35,13 @@ export const InputWrapper = styled.div<InputWrapperProps>`
     box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
     border-radius: 8px;
     padding: 10px 14px;
+  }
+
+  input::placeholder {
+    color: ${(props) =>
+      props.variant === Colors.tertiary || props.variant === Colors.dark
+        ? '#cbc2c2'
+        : Colors.darkGreyText};
   }
 
   input:focus-visible {

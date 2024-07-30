@@ -60,9 +60,9 @@ export const ModalWrapper = styled.div<ModalWrapperProps>`
           : '100%'};
   margin: ${(props) =>
     props.position === 'left'
-      ? '0 0 0 12.5%'
+      ? '0 0 0 2.5%'
       : props.position === 'right'
-        ? '0 12.5% 0 0 '
+        ? '0 2.5% 0 0 '
         : props.size === 's'
           ? '124px auto 0 auto '
           : '0 auto'};

@@ -1,11 +1,11 @@
 :root {
   /* background */
-  --background-light: #fffcf1;
+  --background-light: #eeddca;
   --background-dark: #222222;
   --background-white: #ffffff;
-  --background-primary: #d7c9b8;
+  --background-primary: #d5c0a0;
   --background-secondary: #ebe6de;
-  --background-tertionary: #698474;
+  --background-tertiary: #698474;
 
   /* text */
   --text-black: #000000;
@@ -20,7 +20,6 @@ body {
   margin: 0;
   width: 100vw;
   font-family: 'Lato', sans-serif;
-  /* background-color: var(--background-primary); */
   background-repeat: repeat;
 
   color: var(--text-dark);
@@ -43,7 +42,7 @@ header {
 }
 
 button {
-  background-color: var(--background-tertionary);
+  background-color: var(--background-tertiary);
   color: var(--text-black);
 }
 

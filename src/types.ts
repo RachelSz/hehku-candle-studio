@@ -5,17 +5,25 @@ export interface Sizes {
 }
 
 export interface Variants {
-  light: string;
+  white: string;
   dark: string;
   primary: string;
   secondary: string;
 }
 
 export interface InputVariants {
-  tertionary: string;
+  tertiary: string;
   dark: string;
   white: string;
 
   primary: string;
   secondary: string;
+}
+
+export interface BtnVariants {
+  primary: string;
+  secondary: string;
+  tertiary: string;
+  danger: string;
+  successful: string;
 }

@@ -1,4 +1,4 @@
-import { ChangeEvent } from 'react';
+import { ChangeEvent, useEffect, useState } from 'react';
 import { sizes, inputVariants as variants } from '../../../consts';
 import { Sizes, InputVariants } from '../../../types';
 import { InputWrapper } from './Input.style';
@@ -14,6 +14,7 @@ interface Props {
   placeholder?: string;
   label?: string;
   disabled?: boolean;
+  required?: boolean;
 }
 
 export default function Input({
@@ -26,14 +27,16 @@ export default function Input({
   placeholder,
   label,
   disabled,
+  required,
 }: Props) {
   return (
     <InputWrapper
-      variant={variant ? variant(variants) : 'white'}
+      variant={variant ? variant(variants) : '#fff'}
       size={size ? size(sizes) : 's'}
     >
-      <label htmlFor={label}>{label}</label>
+      {label && <label htmlFor={label}>{label}</label>}
       <input
+        required={required}
         type={type}
         onChange={onChange}
         value={value}

@@ -30,15 +30,15 @@ export const devices = {
 
 export const Colors = {
   // background
-  light: '#fffcf1',
   dark: '#222222',
-
   white: '#ffffff',
-
-  primary: '#d7c9b8',
-  secondary: '#ebe6de',
-
-  tertionary: '#698474',
+  primary: '#eeddca',
+  secondary: '#d5c0a0',
+  tertiary: '#698474',
+  hover: {
+    tertiary: 'red',
+    white: 'grey',
+  },
 
   // text
   darkText: ' #000000',
@@ -47,24 +47,35 @@ export const Colors = {
 
   primaryText: '#938d84',
   secondaryText: '#65615b',
+
+  danger: '#FE5F55',
+  successful: '#139675',
+
+  disabled: '#dfdfdf',
+  disabledText: '#a5a5a5',
 };
 
 export const sizes = { s: 's', m: 'm', l: 'l' };
 
 export const variants = {
   white: Colors.white,
-  light: Colors.light,
   dark: Colors.dark,
   primary: Colors.primary,
   secondary: Colors.secondary,
 };
 
 export const inputVariants = {
-  tertionary: Colors.tertionary,
-
+  white: Colors.white,
+  dark: Colors.dark,
   primary: Colors.primary,
   secondary: Colors.secondary,
+  tertiary: Colors.tertiary,
+};
 
-  dark: Colors.dark,
-  white: Colors.white,
+export const btnVariants = {
+  primary: Colors.tertiary,
+  secondary: Colors.white,
+  tertiary: 'transparent',
+  danger: Colors.danger,
+  successful: Colors.successful,
 };
