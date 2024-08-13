@@ -1,36 +1,48 @@
 :root {
-  --background-color: #F5F5DC;
-  --off-white: #F8F8F8;
-  --light-nude: #EEDFCC;
-  --dark-nude: #C8B89A;
-  --earthy-green: #A6A57A;
-  --light-brown: #D2B48C;
-  --text-black: #000000;
-  --text-dark-gray: #333333;
-}
+  /* background */
+  --background-light: #eeddca;
+  --background-dark: #222222;
+  --background-white: #ffffff;
+  --background-primary: #d5c0a0;
+  --background-secondary: #ebe6de;
+  --background-tertiary: #698474;
 
+  /* text */
+  --text-black: #000000;
+  --text-light: #f5f5f5;
+  --text-dark: #393536;
+
+  --text-primary: #938d84;
+  --text-secondary: #65615b;
+}
 
 body {
   margin: 0;
-  font-family: "Lato", sans-serif;
-  background-color: var(--background-color);
-  color: var(--text-dark-gray);
+  width: 100vw;
+  font-family: 'Lato', sans-serif;
+  background-repeat: repeat;
+
+  color: var(--text-dark);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Playfair Display", serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Playfair Display', serif;
   color: var(--text-black);
 }
 
 header {
-  background-color: var(--off-white);
+  background-color: var(--background-light);
 }
 
 button {
-  background-color: var(--light-nude);
+  background-color: var(--background-tertiary);
   color: var(--text-black);
 }
 
@@ -39,16 +51,11 @@ button:hover {
 }
 
 a {
-  color: var(--dark-nude);
+  color: var(--text-primary);
 }
 
 a:hover {
-  color: var(--light-brown);
-}
-
-footer {
-  background-color: var(--off-white);
-  color: var(--text-dark-gray);
+  color: var(--text-primary);
 }
 
 code {

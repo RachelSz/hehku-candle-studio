@@ -23,7 +23,6 @@ const getGridColumn = (
     const spanValue = span ? `span ${span}` : 'span 12';
     const offsetValue = offset ? `${offset + 1} /` : '';
 
-    console.log({ offsetValue, spanValue });
     return `${offsetValue} ${spanValue}`;
   }
   return 'span 12';
