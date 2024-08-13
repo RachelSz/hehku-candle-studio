@@ -12,7 +12,7 @@ import {
 export default function Home() {
   const slides = [
     {
-      src: '/assets/mock-hero.avif',
+      src: '/assets/mockImages/mock-hero.avif',
       alt: 'hehkucandlestudio',
 
       children: (
@@ -44,7 +44,7 @@ export default function Home() {
     },
 
     {
-      src: '/assets/mock-hero-2.avif',
+      src: '/assets/mockImages/mock-hero-2.avif',
       alt: 'hehkucandlestudio',
 
       children: (
@@ -68,7 +68,7 @@ export default function Home() {
     },
 
     {
-      src: '/assets/mock-hero-3.avif',
+      src: '/assets/mockImages/mock-hero-3.avif',
       alt: 'hehkucandlestudio',
 
       children: (
@@ -101,7 +101,11 @@ export default function Home() {
         </Column>
       </Row>
 
-      <Row>Productslist </Row>
+      <Row>
+        <Column sizes={{ mobile: 12, tablet: 12, desktop: 12 }}>
+          Producrslist
+        </Column>
+      </Row>
     </Container>
   );
 }

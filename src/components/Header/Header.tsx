@@ -1,8 +1,8 @@
 import { devices } from '../../consts';
 import useMediaQuery from '../../hooks/useMediaQuery/useMediaQuery';
 import { routes } from '../../routes';
+import { NavbarMobile } from '../NavbarMobile';
 
-import NavbarMobile from '../NavbarMobile/NavbarMobile';
 import { Logo } from '../ui';
 import {
   CustomNavLink,
