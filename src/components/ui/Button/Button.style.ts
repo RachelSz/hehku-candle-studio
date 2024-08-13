@@ -38,9 +38,6 @@ export const CustomButton = styled.button<CustomButtonProps>`
     props.size === sizes.s ? '12px' : props.size === sizes.m ? '18px' : '24px'};
   line-height: 20px;
 
-  width: 100%;
-  height: 100%;
-
   cursor: pointer;
   letter-spacing: 2px;
 

@@ -1,101 +1,107 @@
+import { Link } from 'react-router-dom';
+import { Button, HeroSlider } from '../../components/ui';
 import { Column } from '../../ui/Grid/Column.style';
 import { Container } from '../../ui/Grid/Container.style';
 import { Row } from '../../ui/Grid/Row.style';
-import { TestDiv } from './Home.style';
+import { pages } from '../../routes';
+import {
+  HeroText,
+  HeroTitleWrapper,
+} from '../../components/ui/HeroSlider/HeroSlider.style';
 
 export default function Home() {
+  const slides = [
+    {
+      src: '/assets/mock-hero.avif',
+      alt: 'hehkucandlestudio',
+
+      children: (
+        <>
+          <HeroTitleWrapper>
+            <span>Welcome to</span>
+            <h1>
+              Hehku <br /> Candle studio
+            </h1>
+          </HeroTitleWrapper>
+          <HeroText>
+            Discover unique, hand crafted <br />
+            soy wax candles
+          </HeroText>
+
+          <div>
+            <Link to={pages.products}>
+              <Button
+                variant={(v) => v.primary}
+                size={(s) => s.m}
+                type={(t) => t.button}
+              >
+                Shop now
+              </Button>
+            </Link>
+          </div>
+        </>
+      ),
+    },
+
+    {
+      src: '/assets/mock-hero-2.avif',
+      alt: 'hehkucandlestudio',
+
+      children: (
+        <>
+          <HeroTitleWrapper></HeroTitleWrapper>
+          <HeroText>Discover our new collection of concrete candles.</HeroText>
+
+          <div>
+            <Link to={pages.products}>
+              <Button
+                variant={(v) => v.primary}
+                size={(s) => s.m}
+                type={(t) => t.button}
+              >
+                Shop now
+              </Button>
+            </Link>
+          </div>
+        </>
+      ),
+    },
+
+    {
+      src: '/assets/mock-hero-3.avif',
+      alt: 'hehkucandlestudio',
+
+      children: (
+        <>
+          <HeroTitleWrapper>
+            <h2>In search of a gift?</h2>
+          </HeroTitleWrapper>
+          <HeroText>Check out our collection.</HeroText>
+
+          <div>
+            <Link to={pages.products}>
+              <Button
+                variant={(v) => v.primary}
+                size={(s) => s.m}
+                type={(t) => t.button}
+              >
+                Shop now
+              </Button>
+            </Link>
+          </div>
+        </>
+      ),
+    },
+  ];
   return (
     <Container>
-      <p>Homepage</p>
-
-      <Row>
-        <Column sizes={{ mobile: 12, tablet: 6, desktop: 4 }}>
-          <TestDiv>First Column - mobile: 12, tablet: 6, desktop: 4 </TestDiv>
-        </Column>
-        <Column sizes={{ mobile: 12, tablet: 6, desktop: 4 }}>
-          <TestDiv>Second Column - mobile: 12, tablet: 6, desktop: 4 </TestDiv>
-        </Column>
-        <Column sizes={{ mobile: 12, tablet: 12, desktop: 4 }}>
-          <Row>
-            <Column sizes={{ mobile: 12, tablet: 6, desktop: 6 }}>
-              <div style={{ border: '1px solid pink', background: 'pink' }}>
-                Nested 1 - mobile: 12, tablet: 6, desktop: 6{' '}
-              </div>
-            </Column>
-
-            <Column sizes={{ mobile: 12, tablet: 6, desktop: 6 }}>
-              <div style={{ border: '1px solid orange', background: 'orange' }}>
-                Nested 2 - mobile: 12, tablet: 6, desktop: 6
-              </div>
-            </Column>
-          </Row>
-        </Column>
-      </Row>
-      <Row>
-        <Column
-          sizes={{ mobile: 12, tablet: 12, desktop: { span: 4, offset: 4 } }}
-        >
-          <div
-            style={{
-              border: '1px solid purple',
-              background: 'purple',
-              color: 'white',
-            }}
-          >
-            Fourth Column
-          </div>
-        </Column>
-        <Column
-          sizes={{ mobile: 12, tablet: 12, desktop: { span: 4, offset: 0 } }}
-        >
-          <div style={{ border: '1px solid green', background: 'green' }}>
-            Fifth Column
-          </div>
-        </Column>
-      </Row>
-
-      <Row>
-        <Column
-          sizes={{ mobile: 12, tablet: 12, desktop: { span: 4, offset: 0 } }}
-        >
-          <div
-            style={{
-              border: '1px solid pink',
-              background: 'pink',
-              color: 'red',
-            }}
-          >
-            6th Column
-          </div>
-        </Column>
-        <Column
-          sizes={{ mobile: 12, tablet: 12, desktop: { span: 4, offset: 8 } }}
-        >
-          <div
-            style={{
-              border: '1px solid maroon',
-              background: 'maroon',
-              color: 'beige',
-            }}
-          >
-            7th Column
-          </div>
-        </Column>
-      </Row>
-
       <Row>
         <Column sizes={{ mobile: 12, tablet: 12, desktop: 12 }}>
-          <div
-            style={{
-              border: '1px solid black',
-              width: '100%',
-              height: '3900px',
-            }}
-          >
-            {' '}
-          </div>
+          <HeroSlider slides={slides}></HeroSlider>
         </Column>
       </Row>
+
+      <Row>Productslist </Row>
     </Container>
   );
 }

@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import { LogoContainer } from './Logo.style';
-// import { sizes } from '../../consts';
 import { Sizes } from '../../../types';
 import { sizes } from '../../../consts';
+import { pages } from '../../../routes';
 
 const variants = {
   light: '/assets/big-light-logo.png',
@@ -22,7 +22,7 @@ interface Props {
 export default function Logo({ variant, size }: Props) {
   return (
     <LogoContainer>
-      <Link to="/">
+      <Link to={pages.homepage}>
         <img
           src={variant(variants)}
           width={size(sizes) === 's' ? 50 : size(sizes) === 'm' ? 100 : 150}

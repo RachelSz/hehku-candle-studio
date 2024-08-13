@@ -15,7 +15,7 @@ interface Props {
   size: (sizes: Sizes) => string;
   children: string | JSX.Element | JSX.Element[] | ReactNode;
   type: (buttonTypes: ButtonType) => string;
-  onClick: () => void;
+  onClick?: () => void;
   disabled?: boolean;
 
   active?: boolean;
